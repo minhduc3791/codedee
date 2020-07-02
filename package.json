@@ -7,12 +7,15 @@
     "@aspnet/signalr": "^1.1.4",
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
+    "@loadable/component": "^5.12.0",
     "@microsoft/signalr": "^3.1.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.3.4",
     "connected-react-router": "4.5.0",
+    "gulp-run": "^1.7.1",
+    "gulp-util": "^3.0.8",
     "history": "^4.0.0",
     "react": "^16.12.0",
     "react-cookie": "^4.0.3",
@@ -22,7 +25,8 @@
     "react-router-redux": "5.0.0-alpha.9",
     "react-scripts": "3.4.1",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "vinyl-ftp": "^0.6.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -44,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

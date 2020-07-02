@@ -16,7 +16,7 @@ const AppSideNav = () => {
   const [ sub, setSub ] = useState([pathParts[3] ? pathParts[3] : '']);
 
   return(
-    <Sider width={200} className="site-layout-background" collapsible collapsed={collapsed} onCollapse={() => {setCollapsed(!collapsed)}}>
+    <Sider width={200} className="site-layout-background" collapsible collapsed={collapsed} onCollapse={() => {setCollapsed(!collapsed)}} breakpoint="md">
       <Menu
         theme="light"
         mode="inline"

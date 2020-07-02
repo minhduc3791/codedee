@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom'
 import { Layout } from 'antd'
-import Algorithm from './Algorithm'
-import Chat from './Chat'
-import Home from './Home'
+import loadable from '@loadable/component'
+import LoadingComponent from 'components/Loading'
 
 const { Content } = Layout;
+
+const AsyncAlgorithm = loadable(() => import('./Algorithm'), {
+  fallback: LoadingComponent
+})
+
+const AsyncChat = loadable(() => import('./Chat'), {
+  fallback: LoadingComponent
+})
+
+const AsyncHome = loadable(() => import('./Home'), {
+  fallback: LoadingComponent
+})
 
 const AppContent = () => {
   return(
@@ -19,9 +30,9 @@ const AppContent = () => {
       }}
     >
       <Switch>
-        <Route path="/algorithm" component={Algorithm} />
-        <Route path="/chat" component={Chat} />
-        <Route exact path="/" component={Home} />
+        <Route path="/algorithm" component={AsyncAlgorithm} />
+        <Route path="/chat" component={AsyncChat} />
+        <Route exact path="/" component={AsyncHome} />
       </Switch>
     </Content>
   )
